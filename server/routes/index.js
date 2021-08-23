@@ -1,9 +1,11 @@
-var express = require('express');
-var router = express.Router();
+const express = require("express");
+const router = express.Router();
 
-/* GET home page. */
-router.get('/', function(req, res, next) {
-  res.render('index', { title: 'Express' });
-});
+const mockRoute = require("./mock.route");
+router.use("/mock", mockRoute);
 
-module.exports = router;
+const ticketRoute = require("./ticket.route");
+router.use("/ticket", ticketRoute);
+
+const teamRoute = require("./team.route");
+router.use("/team", teamRoute);

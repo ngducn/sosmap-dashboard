@@ -6,7 +6,7 @@ const logger = require("morgan");
 const indexRouter = require("./routes/index");
 const cors = require("cors");
 const utilHelpers = require("./helpers/utils.helper");
-const generateData = require("./faker");
+const generateData = require("./mock-data");
 
 const app = express();
 
@@ -21,7 +21,6 @@ mongoose
   })
   .then(() => {
     console.log("Connected.");
-    generateData();
   })
   .catch((err) => console.log(err.message));
 
