@@ -1,2 +1,11 @@
 # sosmap-dashboard-be
-Mock backend for sosmap dashboard
+
+### Run
+
+`npm i`
+
+`npm run dev`
+
+### Mock data
+
+`node mock-data.js`
