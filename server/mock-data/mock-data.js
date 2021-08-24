@@ -82,4 +82,4 @@ const main = () => {
     .catch((err) => console.log(err.message));
 };
 
-main();
+// main();
