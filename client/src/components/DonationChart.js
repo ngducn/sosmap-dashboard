@@ -1,25 +1,24 @@
-import React, { useState, useEffect } from 'react';
-import { Column } from '@ant-design/charts';
+import React, { useState, useEffect } from "react";
+import { Column } from "@ant-design/charts";
 const DonationChart = () => {
   var data = [
     {
-      type: 'Jan',
+      type: "Jan",
       quantity: 38,
     },
     {
-      type: 'Feb',
+      type: "Feb",
       quantity: 52,
     },
     {
-      type: 'March',
+      type: "March",
       quantity: 61,
     },
-  
   ];
   var config = {
     data: data,
-    xField: 'type',
-    yField: 'quantity',
+    xField: "type",
+    yField: "quantity",
     xAxis: {
       label: {
         autoHide: true,
@@ -27,8 +26,8 @@ const DonationChart = () => {
       },
     },
     meta: {
-      type: { alias: '类别' },
-      quantity: { alias: '销售额' },
+      type: { alias: "Người cho" },
+      quantity: { alias: "Số lượng" },
     },
     minColumnWidth: 20,
     maxColumnWidth: 20,
@@ -36,4 +35,4 @@ const DonationChart = () => {
   return <Column {...config} />;
 };
 
-export default DonationChart
+export default DonationChart;
