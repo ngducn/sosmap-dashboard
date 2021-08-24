@@ -4,7 +4,7 @@ const Schema = mongoose.Schema;
 const ticketSchema = Schema(
   {
     type: { type: String, enum: ["send", "receive"], require: true },
-    // priority: { type: String },
+    priority: { type: String },
     status: { type: String },
     ticketOwner: { type: String },
     phoneNumber: { type: String },
@@ -15,7 +15,6 @@ const ticketSchema = Schema(
     },
     note: { type: String },
     items: [{ type: Schema.Types.ObjectId, ref: "ItemBundle" }],
-    // team: { type: Schema.Types.ObjectId, ref: "Team" },
   },
   { timestamp: true }
 );
