@@ -18,22 +18,22 @@ const ReceivedChart = () => {
     {
       name: "Receive",
       Month: "Mon.",
-      Quantity: 18.9,
+      Quantity: 20,
     },
     {
       name: "Receive",
       Month: "Tues.",
-      Quantity: 28.8,
+      Quantity: 29,
     },
     {
       name: "Receive",
       Month: "Wed.",
-      Quantity: 39.3,
+      Quantity: 39,
     },
     {
       name: "Receive",
       Month: "Thurs.",
-      Quantity: 81.4,
+      Quantity: 81,
     },
     {
       name: "Receive",
@@ -43,7 +43,7 @@ const ReceivedChart = () => {
     {
       name: "Receive",
       Month: "Sat.",
-      Quantity: 20.3,
+      Quantity: 20,
     },
     {
       name: "Receive",
@@ -54,22 +54,22 @@ const ReceivedChart = () => {
     {
       name: "Done",
       Month: "Mon.",
-      Quantity: 18,
+      Quantity: 11,
     },
     {
       name: "Done",
       Month: "Tues.",
-      Quantity: 21.8,
+      Quantity: 19,
     },
     {
       name: "Done",
       Month: "Wed.",
-      Quantity: 30.3,
+      Quantity: 30,
     },
     {
       name: "Done",
       Month: "Thurs.",
-      Quantity: 90.4,
+      Quantity: 90,
     },
     {
       name: "Done",
@@ -89,17 +89,17 @@ const ReceivedChart = () => {
     {
       name: "Pending",
       Month: "Mon.",
-      Quantity: 15,
+      Quantity: 9,
     },
     {
       name: "Pending",
       Month: "Tues.",
-      Quantity: 26,
+      Quantity: 10,
     },
     {
       name: "Pending",
       Month: "Wed.",
-      Quantity: 35,
+      Quantity: 10,
     },
     {
       name: "Pending",
