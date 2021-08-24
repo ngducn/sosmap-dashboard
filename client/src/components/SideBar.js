@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import "antd/dist/antd.css";
-import { Layout, Menu, Breadcrumb, Tabs } from "antd";
+import { Layout, Menu, Breadcrumb } from "antd";
 import {
   DesktopOutlined,
   PieChartOutlined,
@@ -11,14 +11,13 @@ import {
 } from "@ant-design/icons";
 import DasBoardPage from "../DasBoardPage";
 import TableData from "./TableData";
-
+import IntroduceBox from "./IntroduceBox/IntroduceBox";
 const { Header, Content, Footer, Sider } = Layout;
 const SideBar = () => {
   const [collapsed, setCollapsed] = useState(false);
   const onCollapse = () => {
     setCollapsed(!collapsed);
   };
-
   return (
     <>
       <Layout style={{ minHeight: "100vh" }}>
@@ -53,10 +52,14 @@ const SideBar = () => {
               className='site-layout-background'
               style={{ padding: 24, minHeight: 360 }}
             >
+              <IntroduceBox />
               <DasBoardPage />
             </div>
             <TableData />;
           </Content>
+          <Footer style={{ textAlign: "center" }}>
+            SOS DashBoard Created by SOS team
+          </Footer>
         </Layout>
       </Layout>
     </>
