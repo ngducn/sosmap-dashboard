@@ -6,11 +6,11 @@ const logger = require("morgan");
 const indexRouter = require("./routes/index");
 const cors = require("cors");
 const utilHelpers = require("./helpers/utils.helper");
-const generateData = require("./mock-data");
+const mongoose = require("mongoose");
+require("./models/ItemBundle");
+require("./models/Ticket");
 
 const app = express();
-
-const mongoose = require("mongoose");
 
 const uri = process.env.MONGODB_URI;
 
@@ -18,6 +18,8 @@ mongoose
   .connect(uri, {
     useNewUrlParser: true,
     useUnifiedTopology: true,
+    useFindAndModify: false,
+    useCreateIndex: true,
   })
   .then(() => {
     console.log("Connected.");

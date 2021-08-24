@@ -12,4 +12,6 @@ Go to MongoDBCompass
 
 Drop `sosmap` database
 
+`cd mock-data`
+
 `node mock-data.js`
