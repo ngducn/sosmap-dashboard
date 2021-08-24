@@ -1,11 +1,12 @@
 const utilsHelper = require("../helpers/utils.helper");
 const Tickets = require("../models/Ticket");
+const ItemBundle = require("../models/ItemBundle");
+const Item = require("../models/Item");
 const ticketController = {};
 
 ticketController.getAllTickets = async (req, res, next) => {
   try {
-    let page = req.query.page;
-    let limit = req.query.limit;
+    let { page, limit, type } = { ...req.query };
     page = parseInt(page) || 1;
     limit = parseInt(limit) || 10;
 
@@ -13,7 +14,7 @@ ticketController.getAllTickets = async (req, res, next) => {
     const totalPages = Math.ceil(totalTickets / limit);
     const offset = limit * (page - 1);
 
-    const tickets = await Tickets.find()
+    const tickets = await Tickets.find({ type: type })
       .populate({
         path: "items",
         populate: {

@@ -1,20 +1,19 @@
 import React, { useState } from "react";
 import "antd/dist/antd.css";
-import { Layout, Menu, Breadcrumb } from "antd";
+import { Layout, Menu } from "antd";
 import {
-  DesktopOutlined,
-  PieChartOutlined,
-  FileOutlined,
   EnvironmentOutlined,
   UserOutlined,
   AlignLeftOutlined,
 } from "@ant-design/icons";
 import { Link } from "react-router-dom";
+import Chart from "../components/Charts/Chart";
+import TableData from "../components/TableData";
+import IntroduceBox from "../components/IntroduceBox/IntroduceBox";
 
-import TableData from "./TableData";
-import Dashboard from "../pages/Dashboard";
 const { Header, Content, Footer, Sider } = Layout;
-const SideBar = () => {
+
+const Dashboard = () => {
   const [collapsed, setCollapsed] = useState(false);
   const onCollapse = () => {
     setCollapsed(!collapsed);
@@ -22,6 +21,7 @@ const SideBar = () => {
   return (
     <>
       <Layout style={{ minHeight: "100vh" }}>
+        {/* Sidebar */}
         <Sider collapsible collapsed={collapsed} onCollapse={onCollapse}>
           <div className="logo" />
           <Menu theme="dark" defaultSelectedKeys={["1"]} mode="inline">
@@ -46,21 +46,25 @@ const SideBar = () => {
             </Menu.Item>
           </Menu>
         </Sider>
+
+        {/* Body */}
         <Layout className="site-layout">
           <Header className="site-layout-background" style={{ padding: 0 }} />
           <Content style={{ margin: "0 16px" }}>
-            {/* <Breadcrumb style={{ margin: '16px 0' }}>
-              <Breadcrumb.Item>User</Breadcrumb.Item>
-              <Breadcrumb.Item>Bill</Breadcrumb.Item>
-            </Breadcrumb> */}
             <div
               className="site-layout-background"
               style={{ padding: 24, minHeight: 360 }}
             >
-              <Dashboard />
+              {/* Components */}
+              <IntroduceBox />
+              <br />
+              <Chart />
+              <br />
+              <TableData />
             </div>
-            <TableData />;
           </Content>
+
+          {/* Footer */}
           <Footer style={{ textAlign: "center" }}>
             SOS DashBoard Created by SOS team
           </Footer>
@@ -70,4 +74,4 @@ const SideBar = () => {
   );
 };
 
-export default SideBar;
+export default Dashboard;
