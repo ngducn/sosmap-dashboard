@@ -3,108 +3,127 @@ import { Column } from "@ant-design/charts";
 import { useSelector, useDispatch } from "react-redux";
 import ticketActions from "../../redux/actions/ticket.action";
 const ReceivedChart = () => {
+  let items = [];
   const tickets = useSelector((state) => state.ticket.receivedTicket);
   console.log("ticketReceiver", tickets);
-
   const dispatch = useDispatch();
 
+  console.log("item", items);
   useEffect(() => {
     dispatch(ticketActions.getReceivedTickets());
   }, []);
-  const [data, setData] = useState([
+
+  console.log("item", items);
+  const [chartData, setChartData] = useState([
     {
       name: "Receive",
-      Month: "Jan.",
+      Month: "Mon.",
       Quantity: 18.9,
     },
     {
       name: "Receive",
-      Month: "Feb.",
+      Month: "Tues.",
       Quantity: 28.8,
     },
     {
       name: "Receive",
-      Month: "Mar.",
+      Month: "Wed.",
       Quantity: 39.3,
     },
     {
       name: "Receive",
-      Month: "Apr.",
+      Month: "Thurs.",
       Quantity: 81.4,
     },
     {
       name: "Receive",
-      Month: "May",
+      Month: "Friday",
       Quantity: 47,
     },
     {
       name: "Receive",
-      Month: "Jun.",
+      Month: "Sat.",
       Quantity: 20.3,
     },
     {
       name: "Receive",
-      Month: "Jul.",
+      Month: "Sun.",
       Quantity: 24,
     },
+
     {
-      name: "Receive",
-      Month: "Aug.",
-      Quantity: 35.6,
+      name: "Done",
+      Month: "Mon.",
+      Quantity: 18,
     },
     {
       name: "Done",
-      Month: "Jan.",
-      Quantity: 12.4,
+      Month: "Tues.",
+      Quantity: 21.8,
     },
     {
       name: "Done",
-      Month: "Feb.",
-      Quantity: 23.2,
+      Month: "Wed.",
+      Quantity: 30.3,
     },
     {
       name: "Done",
-      Month: "Mar.",
-      Quantity: 34.5,
+      Month: "Thurs.",
+      Quantity: 90.4,
     },
     {
       name: "Done",
-      Month: "Apr.",
-      Quantity: 99.7,
+      Month: "Friday",
+      Quantity: 30,
     },
     {
       name: "Done",
-      Month: "May",
-      Quantity: 52.6,
+      Month: "Sat.",
+      Quantity: 23,
     },
     {
       name: "Done",
-      Month: "Jun.",
-      Quantity: 35.5,
-    },
-    {
-      name: "Done",
-      Month: "Jul.",
-      Quantity: 37.4,
+      Month: "Sun.",
+      Quantity: 25,
     },
     {
       name: "Pending",
-      Month: "Jan.",
-      Quantity: 42.4,
+      Month: "Mon.",
+      Quantity: 15,
     },
     {
       name: "Pending",
-      Month: "Feb.",
-      Quantity: 42.4,
+      Month: "Tues.",
+      Quantity: 26,
     },
     {
       name: "Pending",
-      Month: "March",
-      Quantity: 42,
+      Month: "Wed.",
+      Quantity: 35,
+    },
+    {
+      name: "Pending",
+      Month: "Thurs.",
+      Quantity: 19,
+    },
+    {
+      name: "Pending",
+      Month: "Friday",
+      Quantity: 20,
+    },
+    {
+      name: "Pending",
+      Month: "Sat.",
+      Quantity: 50,
+    },
+    {
+      name: "Pending",
+      Month: "Sun.",
+      Quantity: 20,
     },
   ]);
   var config = {
-    data: data,
+    data: chartData,
     isGroup: true,
     xField: "Month",
     yField: "Quantity",
