@@ -1,5 +1,5 @@
 const utilsHelper = require("../helpers/utils.helper");
-const Teams = require("../models/Team.model");
+const Teams = require("../models/Team");
 const teamController = {};
 
 teamController.getAllTeams = async (req, res, next) => {

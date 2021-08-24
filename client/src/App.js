@@ -1,11 +1,14 @@
-import logo from './logo.svg';
+
 import './App.css';
+import 'bootstrap/dist/css/bootstrap.min.css';
+import 'antd/dist/antd.css';
+import SideBar from './components/SideBar';
 
 function App() {
   return (
-    <div >
-     
-    </div>
+    <>
+   <SideBar/>
+    </>
   );
 }
 

@@ -1,5 +1,5 @@
 const utilsHelper = require("../helpers/utils.helper");
-const Tickets = require("../models/Ticket.model");
+const Tickets = require("../models/Ticket");
 const ticketController = {};
 
 ticketController.getAllTickets = async (req, res, next) => {
