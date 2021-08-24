@@ -7,9 +7,28 @@ const Team = require("./models/Team");
 const db_raw = require("./sosmap-data.json");
 const db = db_raw.filter((e) => e.team._id == "6110fe2bf743e01e61caefc9");
 
-const status_mock = ["done", "pending", "not-done"];
+const generateItems = async () => {
+  const items = [
+    { type: "necessities", name: "mi-goi", unit: "thùng" },
+    { type: "necessities", name: "gao", unit: "kg" },
+    { type: "necessities", name: "sua", unit: "l" },
+    { type: "necessities", name: "rau-cu-qua", unit: "kg" },
+    { type: "necessities", name: "khau-trang", unit: "hộp" },
+  ];
 
-const generateData = async () => {
+  try {
+    for (let i = 0; i < items.length; i++) {
+      let item = await Item.create(items[i]);
+      console.log("Created: ", item);
+    }
+  } catch (error) {
+    console.log(error);
+    return;
+  }
+};
+
+const generateTickets = async () => {
+  const status_mock = ["done", "pending", "not-done"];
   const tickets = db.map((ticket) => {
     return {
       _id: ticket._id,
@@ -29,13 +48,13 @@ const generateData = async () => {
     for (let i = 0; i < tickets.length; i++) {
       let items_id = await Promise.all(
         tickets[i]?.items?.map(async (item) => {
+          let individualItem = await Item.find({ name: item?.item?.slug });
           let bundle = await ItemBundle.create({
             owner: tickets[i]._id,
             amount: item.amount,
-            item: "6110fe2bf743e01e61caefc9",
+            item: individualItem[0]?._id,
           });
           await bundle.save();
-          // console.log("bundle", bundle);
           return bundle._id;
         })
       );
@@ -56,8 +75,9 @@ const main = () => {
     })
     .then(() => {
       console.log("Connected.");
-      generateData();
-      console.log("Generated done!");
+      generateItems();
+      generateTickets();
+      console.log("Generated!");
     })
     .catch((err) => console.log(err.message));
 };
