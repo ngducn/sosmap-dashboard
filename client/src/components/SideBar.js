@@ -11,6 +11,7 @@ import {
 } from "@ant-design/icons";
 import { Link } from "react-router-dom";
 import DasBoardPage from "../DasBoardPage";
+import TableData from "./TableData";
 const { Header, Content, Footer, Sider } = Layout;
 const SideBar = () => {
   const [collapsed, setCollapsed] = useState(false);
@@ -39,7 +40,7 @@ const SideBar = () => {
               Thống Kê
             </Menu.Item>
 
-            <Menu.Item key="4" icon={<UserOutlined />}>
+            <Menu.Item key="9" icon={<UserOutlined />}>
               Thông Tin Tài Khoản
             </Menu.Item>
           </Menu>
@@ -57,6 +58,7 @@ const SideBar = () => {
             >
               <DasBoardPage />
             </div>
+            <TableData />;
           </Content>
           <Footer style={{ textAlign: "center" }}>
             SOS DashBoard Created by SOS team

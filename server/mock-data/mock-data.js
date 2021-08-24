@@ -1,8 +1,8 @@
 const mongoose = require("mongoose");
-const Ticket = require("./models/Ticket");
-const Item = require("./models/Item");
-const ItemBundle = require("./models/ItemBundle");
-const Team = require("./models/Team");
+const Ticket = require("../models/Ticket");
+const Item = require("../models/Item");
+const ItemBundle = require("../models/ItemBundle");
+const Team = require("../models/Team");
 
 const db_raw = require("./sosmap-data.json");
 const db = db_raw.filter((e) => e.team._id == "6110fe2bf743e01e61caefc9");
