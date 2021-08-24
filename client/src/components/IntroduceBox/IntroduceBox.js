@@ -12,14 +12,9 @@ const IntroduceBox = () => {
           span={6}
           className='ant-col ant-col-xs-24 ant-col-sm-12 ant-col-md-12 ant-col-lg-12 ant-col-xl-6 card-padding'
         >
-          <Card
-            className='card-introduce'
-            title='Request Received'
-            bordered={false}
-          >
+          <Card className='card_box' title='Request Received'>
             <div className='statistic-card'>
               <Statistic
-                // title="Active"
                 value={11.28}
                 precision={2}
                 valueStyle={{ color: "#3f8600" }}
@@ -27,12 +22,9 @@ const IntroduceBox = () => {
                 suffix='%'
               />
               <Statistic
-                // title="Idle"
-                value={616} //  hub data
+                value={616}
                 precision={0}
                 valueStyle={{ color: "#cf1322" }}
-                // prefix={<ArrowDownOutlined />}
-                // suffix="%"
               />
             </div>
           </Card>
@@ -43,14 +35,9 @@ const IntroduceBox = () => {
           span={6}
           className='ant-col ant-col-xs-24 ant-col-sm-12 ant-col-md-12 ant-col-lg-12 ant-col-xl-6 card-padding'
         >
-          <Card
-            className='card-introduce'
-            title='Donation Received'
-            bordered={false}
-          >
+          <Card className='card_box' title='Donation Received'>
             <div className='statistic-card'>
               <Statistic
-                // title="Active"
                 value={12}
                 precision={2}
                 valueStyle={{ color: "#3f8600" }}
@@ -58,12 +45,9 @@ const IntroduceBox = () => {
                 suffix='%'
               />
               <Statistic
-                // title="Idle"
-                value={528} //hub data
+                value={528}
                 precision={0}
                 valueStyle={{ color: "#cf1322" }}
-                // prefix={<ArrowDownOutlined />}
-                // suffix="%"
               />
             </div>
           </Card>
@@ -74,14 +58,9 @@ const IntroduceBox = () => {
           span={6}
           className='ant-col ant-col-xs-24 ant-col-sm-12 ant-col-md-12 ant-col-lg-12 ant-col-xl-6 card-padding'
         >
-          <Card
-            className='card-introduce'
-            title='Donation Scheduled'
-            bordered={false}
-          >
+          <Card className='card_box' title='Donation Scheduled'>
             <div className='statistic-card'>
               <Statistic
-                // title="Active"
                 value={10.46}
                 precision={2}
                 valueStyle={{ color: "#3f8600" }}
@@ -89,12 +68,9 @@ const IntroduceBox = () => {
                 suffix='%'
               />
               <Statistic
-                // title="Idle"
-                value={489} // hub data
+                value={489}
                 precision={0}
                 valueStyle={{ color: "#cf1322" }}
-                // prefix={<ArrowDownOutlined />}
-                // suffix="%"
               />
             </div>
           </Card>
@@ -105,14 +81,9 @@ const IntroduceBox = () => {
           span={6}
           className='ant-col ant-col-xs-24 ant-col-sm-12 ant-col-md-12 ant-col-lg-12 ant-col-xl-6 card-padding'
         >
-          <Card
-            className='card-introduce'
-            title='Stock Capacity'
-            bordered={false}
-          >
+          <Card className='card_box' title='Stock Capacity'>
             <div className='statistic-card'>
               <Statistic
-                // title="Active"
                 value={14.28}
                 precision={2}
                 valueStyle={{ color: "#3f8600" }}
@@ -120,12 +91,9 @@ const IntroduceBox = () => {
                 suffix='%'
               />
               <Statistic
-                // title="Idle"
-                value={535} //hub data
+                value={535}
                 precision={0}
                 valueStyle={{ color: "#cf1322" }}
-                // prefix={<ArrowDownOutlined />}
-                // suffix="%"
               />
             </div>
           </Card>

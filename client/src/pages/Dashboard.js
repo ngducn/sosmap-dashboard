@@ -5,6 +5,7 @@ import {
   EnvironmentOutlined,
   UserOutlined,
   AlignLeftOutlined,
+  TeamOutlined,
 } from "@ant-design/icons";
 import { Link } from "react-router-dom";
 import Chart from "../components/Charts/Chart";
@@ -24,12 +25,14 @@ const Dashboard = () => {
         {/* Sidebar */}
         <Sider collapsible collapsed={collapsed} onCollapse={onCollapse}>
           <div className='logo' />
-          <Menu theme='dark' defaultSelectedKeys={["1"]} mode='inline'>
-            <Menu.Item key='5'></Menu.Item>
+          <Menu theme='dark' mode='inline'>
+            <Menu.Item style={{ fontSize: 19 }} key='5'>
+              DASHBOARD
+            </Menu.Item>
             <Menu.Item icon={<EnvironmentOutlined />} key='1'>
               Điểm Đăng Ký
             </Menu.Item>
-            <Menu.Item icon={<UserOutlined />} key='2'>
+            <Menu.Item icon={<TeamOutlined />} key='2'>
               Thành Viên
             </Menu.Item>
             <Menu.Item
@@ -41,15 +44,22 @@ const Dashboard = () => {
               Thống Kê
             </Menu.Item>
 
-            <Menu.Item key='9' icon={<UserOutlined />}>
+            <Menu.Item key='49' icon={<UserOutlined />}>
               Thông Tin Tài Khoản
             </Menu.Item>
           </Menu>
         </Sider>
 
         {/* Body */}
-        <Layout className='site-layout'>
-          <Header className='site-layout-background' style={{ padding: 0 }} />
+        <Layout style={{ backgroundColor: "#f0f2f5" }} className='site-layout'>
+          <Header
+            className='site-layout-background'
+            style={{
+              padding: 0,
+              backgroundColor: "white",
+              boxShadow: "rgba(149, 157, 165, 0.2) 0px 2px 2px",
+            }}
+          />
           <Content style={{ margin: "0 16px" }}>
             <div
               className='site-layout-background'
