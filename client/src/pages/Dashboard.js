@@ -23,36 +23,36 @@ const Dashboard = () => {
       <Layout style={{ minHeight: "100vh" }}>
         {/* Sidebar */}
         <Sider collapsible collapsed={collapsed} onCollapse={onCollapse}>
-          <div className="logo" />
-          <Menu theme="dark" defaultSelectedKeys={["1"]} mode="inline">
-            <Menu.Item key="5"></Menu.Item>
-            <Menu.Item icon={<EnvironmentOutlined />} key="1">
+          <div className='logo' />
+          <Menu theme='dark' defaultSelectedKeys={["1"]} mode='inline'>
+            <Menu.Item key='5'></Menu.Item>
+            <Menu.Item icon={<EnvironmentOutlined />} key='1'>
               Điểm Đăng Ký
             </Menu.Item>
-            <Menu.Item icon={<UserOutlined />} key="2">
+            <Menu.Item icon={<UserOutlined />} key='2'>
               Thành Viên
             </Menu.Item>
             <Menu.Item
               icon={<AlignLeftOutlined />}
-              key="3"
+              key='3'
               as={Link}
-              to="/dashboard"
+              to='/dashboard'
             >
               Thống Kê
             </Menu.Item>
 
-            <Menu.Item key="9" icon={<UserOutlined />}>
+            <Menu.Item key='9' icon={<UserOutlined />}>
               Thông Tin Tài Khoản
             </Menu.Item>
           </Menu>
         </Sider>
 
         {/* Body */}
-        <Layout className="site-layout">
-          <Header className="site-layout-background" style={{ padding: 0 }} />
+        <Layout className='site-layout'>
+          <Header className='site-layout-background' style={{ padding: 0 }} />
           <Content style={{ margin: "0 16px" }}>
             <div
-              className="site-layout-background"
+              className='site-layout-background'
               style={{ padding: 24, minHeight: 360 }}
             >
               {/* Components */}

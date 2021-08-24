@@ -1,30 +1,30 @@
 import React from "react";
 import { Card, Col, Row, Statistic } from "antd";
 import "./index.css";
-import { ArrowDownOutlined, ArrowUpOutlined } from "@ant-design/icons";
+import { ArrowUpOutlined } from "@ant-design/icons";
 
 const IntroduceBox = () => {
   return (
-    <div className="site-card-wrapper">
+    <div className='site-card-wrapper'>
       <Row gutter={16}>
         {/* Card 1 */}
         <Col
           span={6}
-          className="ant-col ant-col-xs-24 ant-col-sm-12 ant-col-md-12 ant-col-lg-12 ant-col-xl-6 card-padding"
+          className='ant-col ant-col-xs-24 ant-col-sm-12 ant-col-md-12 ant-col-lg-12 ant-col-xl-6 card-padding'
         >
           <Card
-            className="card-introduce"
-            title="Request Received"
+            className='card-introduce'
+            title='Request Received'
             bordered={false}
           >
-            <div className="statistic-card">
+            <div className='statistic-card'>
               <Statistic
                 // title="Active"
                 value={11.28}
                 precision={2}
                 valueStyle={{ color: "#3f8600" }}
                 prefix={<ArrowUpOutlined />}
-                suffix="%"
+                suffix='%'
               />
               <Statistic
                 // title="Idle"
@@ -41,21 +41,21 @@ const IntroduceBox = () => {
         {/* Card 2 */}
         <Col
           span={6}
-          className="ant-col ant-col-xs-24 ant-col-sm-12 ant-col-md-12 ant-col-lg-12 ant-col-xl-6 card-padding"
+          className='ant-col ant-col-xs-24 ant-col-sm-12 ant-col-md-12 ant-col-lg-12 ant-col-xl-6 card-padding'
         >
           <Card
-            className="card-introduce"
-            title="Donation Received"
+            className='card-introduce'
+            title='Donation Received'
             bordered={false}
           >
-            <div className="statistic-card">
+            <div className='statistic-card'>
               <Statistic
                 // title="Active"
                 value={12}
                 precision={2}
                 valueStyle={{ color: "#3f8600" }}
                 prefix={<ArrowUpOutlined />}
-                suffix="%"
+                suffix='%'
               />
               <Statistic
                 // title="Idle"
@@ -72,21 +72,21 @@ const IntroduceBox = () => {
         {/* Card 3 */}
         <Col
           span={6}
-          className="ant-col ant-col-xs-24 ant-col-sm-12 ant-col-md-12 ant-col-lg-12 ant-col-xl-6 card-padding"
+          className='ant-col ant-col-xs-24 ant-col-sm-12 ant-col-md-12 ant-col-lg-12 ant-col-xl-6 card-padding'
         >
           <Card
-            className="card-introduce"
-            title="Donation Scheduled"
+            className='card-introduce'
+            title='Donation Scheduled'
             bordered={false}
           >
-            <div className="statistic-card">
+            <div className='statistic-card'>
               <Statistic
                 // title="Active"
                 value={10.46}
                 precision={2}
                 valueStyle={{ color: "#3f8600" }}
                 prefix={<ArrowUpOutlined />}
-                suffix="%"
+                suffix='%'
               />
               <Statistic
                 // title="Idle"
@@ -103,21 +103,21 @@ const IntroduceBox = () => {
         {/* Card 4 */}
         <Col
           span={6}
-          className="ant-col ant-col-xs-24 ant-col-sm-12 ant-col-md-12 ant-col-lg-12 ant-col-xl-6 card-padding"
+          className='ant-col ant-col-xs-24 ant-col-sm-12 ant-col-md-12 ant-col-lg-12 ant-col-xl-6 card-padding'
         >
           <Card
-            className="card-introduce"
-            title="Stock Capacity"
+            className='card-introduce'
+            title='Stock Capacity'
             bordered={false}
           >
-            <div className="statistic-card">
+            <div className='statistic-card'>
               <Statistic
                 // title="Active"
                 value={14.28}
                 precision={2}
                 valueStyle={{ color: "#3f8600" }}
                 prefix={<ArrowUpOutlined />}
-                suffix="%"
+                suffix='%'
               />
               <Statistic
                 // title="Idle"
