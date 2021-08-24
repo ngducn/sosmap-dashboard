@@ -3,14 +3,14 @@ const teamController = require("../controllers/team.controller");
 const router = express.Router();
 
 /**
- * @route GET /team
+ * @route GET api/team
  * @description Get all teams
  * @access public
  */
 router.get("/", teamController.getAllTeams);
 
 /**
- * @route GET /team/:id
+ * @route GET api/team/:id
  * @description Get detail of a single team
  * @access public
  */
