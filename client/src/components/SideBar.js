@@ -10,8 +10,9 @@ import {
   AlignLeftOutlined,
 } from "@ant-design/icons";
 import { Link } from "react-router-dom";
-import DasBoardPage from "../DasBoardPage";
+
 import TableData from "./TableData";
+import Dashboard from "../pages/Dashboard";
 const { Header, Content, Footer, Sider } = Layout;
 const SideBar = () => {
   const [collapsed, setCollapsed] = useState(false);
@@ -56,7 +57,7 @@ const SideBar = () => {
               className="site-layout-background"
               style={{ padding: 24, minHeight: 360 }}
             >
-              <DasBoardPage />
+              <Dashboard />
             </div>
             <TableData />;
           </Content>

@@ -3,11 +3,11 @@ import * as types from "../constants/ticket.constant";
 import api from "../apiService";
 
 const getTickets =
-  (pageNum = 1, limit = 10, isDone) =>
+  (pageNum = 1, limit = 10, isDone, type = null) =>
   async (dispatch) => {
     dispatch({ type: types.GET_TICKETS_REQUEST, payload: null });
     try {
-      let url = `/ticket?page=${pageNum}&limit=${limit}`;
+      let url = `/ticket?type=${type}&page=${pageNum}&limit=${limit}`;
       const data = await api.get(url);
       dispatch({
         type: types.GET_TICKETS_SUCCESS,
@@ -19,11 +19,11 @@ const getTickets =
     }
   };
 const getReceivedTickets =
-  (pageNum = 1, limit = 10, isDone) =>
+  (pageNum = 1, limit = 10, type = "receive") =>
   async (dispatch) => {
     dispatch({ type: types.GET_RECEIVED_TICKET_REQUEST, payload: null });
     try {
-      let url = `/ticket?page=${pageNum}&limit=${limit}`;
+      let url = `/ticket?type=${type}&page=${pageNum}&limit=${limit}`;
       const data = await api.get(url);
       dispatch({
         type: types.GET_RECEIVED_TICKET_SUCCESS,
@@ -36,11 +36,11 @@ const getReceivedTickets =
   };
 
 const getDonationTickets =
-  (pageNum = 1, limit = 10, isDone) =>
+  (pageNum = 1, limit = 10, type = "send") =>
   async (dispatch) => {
     dispatch({ type: types.GET_DONATION_TICKET_REQUEST, payload: null });
     try {
-      let url = `/ticket?page=${pageNum}&limit=${limit}`;
+      let url = `/ticket?type=${type}&page=${pageNum}&limit=${limit}`;
       const data = await api.get(url);
       dispatch({
         type: types.GET_DONATION_TICKET_SUCCESS,
