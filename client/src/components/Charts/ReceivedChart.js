@@ -16,37 +16,37 @@ const ReceivedChart = () => {
   console.log("item", items);
   const [chartData, setChartData] = useState([
     {
-      name: "Receive",
+      name: "Not-done",
       Month: "Mon.",
       Quantity: 20,
     },
     {
-      name: "Receive",
+      name: "Not-done",
       Month: "Tues.",
       Quantity: 29,
     },
     {
-      name: "Receive",
+      name: "Not-done",
       Month: "Wed.",
       Quantity: 39,
     },
     {
-      name: "Receive",
+      name: "Not-done",
       Month: "Thurs.",
       Quantity: 81,
     },
     {
-      name: "Receive",
+      name: "Not-done",
       Month: "Friday",
       Quantity: 47,
     },
     {
-      name: "Receive",
+      name: "Not-done",
       Month: "Sat.",
       Quantity: 20,
     },
     {
-      name: "Receive",
+      name: "Not-done",
       Month: "Sun.",
       Quantity: 24,
     },

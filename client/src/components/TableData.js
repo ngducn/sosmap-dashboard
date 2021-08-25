@@ -7,60 +7,51 @@ const TableData = () => {
   const data = [
     {
       key: "1",
-      firstName: "Lan",
-      lastName: "Nguyen",
+      firstName: "Chinh",
       PhoneNumber: "+84936729789",
       address: "Nguyen Van Linh, District 7",
-      status: ["Receives", "Pending"],
+      status: ["Available"],
     },
     {
       key: "2",
-      firstName: "Hong",
-      lastName: "Pham",
+      firstName: "Chuong",
       PhoneNumber: "+84936729789",
       address: "Ton Dan, District 4",
-      status: ["Receives", "Pending"],
+      status: ["Available"],
     },
     {
       key: "3",
-      firstName: "Trieu",
-      lastName: "Tran",
+      firstName: "Duc Anh",
       PhoneNumber: "+84936729789",
       address: "Vo Thi Sau. District 3",
-      status: ["Receives", "Pending"],
+      status: ["Busy"],
     },
     {
       key: "4",
-      firstName: "Dat Tan",
-      lastName: "Nguyen",
+      firstName: "Tuan",
       PhoneNumber: "+84936729789",
       address: "Binh Phuoc, Thu Duc",
-      status: ["Receives", "Pending"],
+      status: ["Available"],
     },
     {
       key: "5",
-      firstName: "Triet",
-      lastName: "Le",
+      firstName: "Tan Tan",
       PhoneNumber: "+84936729789",
       address: "Tan Thoi Nhat Ward, District 12",
-      status: ["Receives", "Pending"],
+      status: ["Available"],
     },
     {
       key: "6",
-      firstName: "Nga",
-      lastName: "Tran",
+      firstName: "Lien",
       PhoneNumber: "+84936729789",
       address: "Ward 12, Go Vap",
-      status: ["Receives", "Pending"],
+      status: ["Busy"],
     },
   ];
   return (
     <Table dataSource={data}>
-      <ColumnGroup title='Name'>
-        <Column title='First Name' dataIndex='firstName' key='firstName' />
-        <Column title='Last Name' dataIndex='lastName' key='lastName' />
-      </ColumnGroup>
-      <Column title='Phone Number' dataIndex='PhoneNumber' key='PhoneNumber' />
+      <Column title='Name' dataIndex='firstName' key='firstName' />
+      <Column title='Phone' dataIndex='PhoneNumber' key='PhoneNumber' />
       <Column title='Address' dataIndex='address' key='address' />
       <Column
         title='Status'
@@ -68,11 +59,19 @@ const TableData = () => {
         key='status'
         render={(status) => (
           <>
-            {status.map((status) => (
-              <Tag color='blue' key={status}>
-                {status}
-              </Tag>
-            ))}
+            {status.map((status) => {
+              let color = "";
+              if (status === "Busy") {
+                color = "volcano";
+              } else {
+                color = "green";
+              }
+              return (
+                <Tag color={color} key={status}>
+                  {status}
+                </Tag>
+              );
+            })}
           </>
         )}
       />
@@ -81,8 +80,8 @@ const TableData = () => {
         key='action'
         render={(text, record) => (
           <Space size='middle'>
-            <a>Confirm</a>
-            <Button type='primary'>Delete</Button>
+            <Button type='primary'>Call</Button>
+            <Button type='secondary'>Delete</Button>
           </Space>
         )}
       />
