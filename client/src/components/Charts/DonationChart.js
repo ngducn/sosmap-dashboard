@@ -13,95 +13,95 @@ const DonationChart = () => {
   }, []);
   const [data, setData] = useState([
     {
-      name: "Receive",
+      name: "Not-done",
       Month: "Mon.",
-      Quantity: 20,
+      Quantity: 40,
     },
     {
-      name: "Receive",
+      name: "Not-done",
       Month: "Tues.",
-      Quantity: 29,
+      Quantity: 56,
     },
     {
-      name: "Receive",
+      name: "Not-done",
       Month: "Wed.",
-      Quantity: 39,
+      Quantity: 12,
     },
     {
-      name: "Receive",
+      name: "Not-done",
       Month: "Thurs.",
-      Quantity: 81,
+      Quantity: 36,
     },
     {
-      name: "Receive",
+      name: "Not-done",
       Month: "Friday",
-      Quantity: 47,
+      Quantity: 120,
     },
     {
-      name: "Receive",
+      name: "Not-done",
       Month: "Sat.",
-      Quantity: 20,
+      Quantity: 23,
     },
     {
-      name: "Receive",
+      name: "Not-done",
       Month: "Sun.",
-      Quantity: 24,
+      Quantity: 3,
     },
 
     {
       name: "Done",
       Month: "Mon.",
-      Quantity: 11,
+      Quantity: 15,
     },
     {
       name: "Done",
       Month: "Tues.",
-      Quantity: 19,
+      Quantity: 22,
     },
     {
       name: "Done",
       Month: "Wed.",
-      Quantity: 30,
+      Quantity: 45,
     },
     {
       name: "Done",
       Month: "Thurs.",
-      Quantity: 90,
+      Quantity: 10,
     },
     {
       name: "Done",
       Month: "Friday",
-      Quantity: 30,
+      Quantity: 21,
     },
     {
       name: "Done",
       Month: "Sat.",
-      Quantity: 23,
+      Quantity: 32,
     },
     {
       name: "Done",
       Month: "Sun.",
-      Quantity: 25,
+      Quantity: 52,
     },
     {
       name: "Pending",
       Month: "Mon.",
-      Quantity: 9,
+      Quantity: 19,
     },
     {
       name: "Pending",
       Month: "Tues.",
-      Quantity: 10,
+      Quantity: 20,
     },
     {
       name: "Pending",
       Month: "Wed.",
-      Quantity: 10,
+      Quantity: 12,
     },
     {
       name: "Pending",
       Month: "Thurs.",
-      Quantity: 19,
+      Quantity: 32,
     },
     {
       name: "Pending",
@@ -111,12 +111,12 @@ const DonationChart = () => {
     {
       name: "Pending",
       Month: "Sat.",
-      Quantity: 50,
+      Quantity: 58,
     },
     {
       name: "Pending",
       Month: "Sun.",
-      Quantity: 20,
+      Quantity: 52,
     },
   ]);
   var config = {
